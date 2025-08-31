@@ -28,7 +28,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("C:\\GEN AI Project\\talentscout-hiring-assistant\\talentscout\\style.css")
+local_css("talentscout/style.css")
 
 # Initialize session state
 def init_session_state():
