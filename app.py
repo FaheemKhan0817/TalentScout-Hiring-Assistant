@@ -98,7 +98,7 @@ main_container = st.container()
 with st.expander("⚙️ Configuration", expanded=False):
     col1, col2 = st.columns(2)
     with col1:
-        model = st.text_input("Model", settings.model_name if hasattr(settings, 'model_name') else "llama3-70b-8192")
+        model = st.text_input("Model", settings.model_name if hasattr(settings, 'model_name') else "openai/gpt-oss-120b")
     with col2:
         consent = st.checkbox("I consent to TalentScout storing my information for recruiting purposes.", value=False)
     st.markdown("""

@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     # API Configuration
     groq_api_key: Optional[str] = Field(default=None, env="GROQ_API_KEY")
-    model_name: str = Field(default="llama3-70b-8192", env="MODEL_NAME")
+    model_name: str = Field(default="openai/gpt-oss-120b", env="MODEL_NAME")
     model_temperature: float = Field(default=0.2, env="MODEL_TEMPERATURE")
     
     # Data Storage
