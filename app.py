@@ -28,7 +28,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("C:\\GEN AI Project\\talentscout-hiring-assistant\\talentscout\\style.css")
+local_css("style.css")
 
 # Initialize session state
 def init_session_state():
@@ -53,6 +53,10 @@ def init_session_state():
 
 # Initialize session state
 init_session_state()
+
+# Create necessary directories if they don't exist
+os.makedirs("data", exist_ok=True)
+os.makedirs("logs", exist_ok=True)
 
 # Header with logo and title
 col1, col2, col3 = st.columns([1, 3, 1])
@@ -94,7 +98,7 @@ main_container = st.container()
 with st.expander("⚙️ Configuration", expanded=False):
     col1, col2 = st.columns(2)
     with col1:
-        model = st.text_input("Model", settings.model_name)
+        model = st.text_input("Model", settings.model_name if hasattr(settings, 'model_name') else "llama3-70b-8192")
     with col2:
         consent = st.checkbox("I consent to TalentScout storing my information for recruiting purposes.", value=False)
     st.markdown("""
@@ -514,7 +518,7 @@ with st.sidebar:
                 st.session_state.qas
             )
             if candidate_id:
-                st.success(f"Saved to {settings.data_dir}/candidates.jsonl")
+                st.success(f"Saved to data/candidates.jsonl")
                 logger.info(f"Manual save triggered for candidate: {candidate_id}")
             else:
                 st.info("Not saved (no consent). Toggle consent to allow storage.")

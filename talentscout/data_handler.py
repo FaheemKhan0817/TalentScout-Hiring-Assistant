@@ -1,20 +1,20 @@
 import os
 import json
 import time
-from talentscout.logger import logger
-import hashlib  # Add this import
-from typing import Dict, Any, Optional, List
+import logging
+import hashlib
+from typing import Dict, Any, Optional
 from datetime import datetime, timedelta
 from .schema import Candidate
 from .config import settings
 from .logger import logger
-from .security import redact_sensitive_data
 
 class DataHandler:
     """Handle data storage with privacy and retention policies."""
     
     def __init__(self):
         self.data_dir = settings.data_dir
+        # Ensure data directory exists
         os.makedirs(self.data_dir, exist_ok=True)
     
     def _clean_expired_data(self):
@@ -56,7 +56,7 @@ class DataHandler:
             }
             
             # Log with redacted data
-            logger.info(f"Storing candidate data: {redact_sensitive_data(record)}")
+            logger.info(f"Storing candidate data: {self._redact_sensitive_data(record)}")
             
             # Write to file
             filepath = os.path.join(self.data_dir, "candidates.jsonl")
@@ -73,6 +73,26 @@ class DataHandler:
     def _hash_data(self, data: str) -> str:
         """Hash sensitive data for privacy."""
         return hashlib.sha256(data.encode()).hexdigest()
+    
+    def _redact_sensitive_data(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """Redact sensitive information from data before logging."""
+        redacted = data.copy()
+        sensitive_fields = ["full_name", "email", "phone"]
+        
+        for field in sensitive_fields:
+            if field in redacted:
+                if field == "email":
+                    redacted[field] = "***@***"
+                elif field == "phone":
+                    redacted[field] = "***-***-****"
+                elif field == "full_name":
+                    name_parts = redacted[field].split()
+                    if len(name_parts) > 1:
+                        redacted[field] = f"{name_parts[0]} {'*' * len(name_parts[-1])}"
+                    else:
+                        redacted[field] = "***"
+        
+        return redacted
     
     def load_candidate_data(self, candidate_id: str) -> Optional[Dict[str, Any]]:
         """Load candidate data by ID."""

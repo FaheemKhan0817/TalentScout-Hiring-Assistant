@@ -1,0 +1,36 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="talentscout",
+    version="1.0.0",
+    description="TalentScout Hiring Assistant - AI-powered candidate screening",
+    author="TalentScout Team",
+    author_email="faheemthakur23@gmail.com",
+    packages=find_packages(),
+    install_requires=[
+        "streamlit>=1.28.0",
+        "langchain>=0.1.0",
+        "langchain-groq>=0.0.1",
+        "pydantic>=2.0.0",
+        "pydantic-settings>=2.0.0",
+        "python-dotenv>=1.0.0",
+        "pandas>=2.0.0",
+        "numpy>=1.24.0",
+        "tenacity>=8.2.0",
+        "requests>=2.31.0",
+        "typing-extensions>=4.5.0",
+    ],
+    python_requires=">=3.8",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+    ],
+)
