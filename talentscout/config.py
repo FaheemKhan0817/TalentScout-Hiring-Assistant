@@ -1,6 +1,7 @@
 import os
 from typing import Optional, Dict, Any
-from pydantic_settings import BaseSettings, Field
+from pydantic import Field
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     # API Configuration
