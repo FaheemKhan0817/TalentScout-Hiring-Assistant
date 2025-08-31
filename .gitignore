@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+.DS_Store
+data/candidates.jsonl
+logs/
+data/
+__pycache__/
+.qodo/
+*.pyc
