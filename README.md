@@ -72,22 +72,9 @@ To revolutionize the recruitment process by providing an efficient, unbiased, an
 
 ### Main Interface
 <div align="center">
-  <img src="https://via.placeholder.com/800x450?text=Main+Interface" alt="Main Interface" width="800">
+  <img src="UI.jpg" alt="Main Interface" width="800">
   <p><em>Clean and intuitive user interface with real-time conversation</em></p>
 </div>
-
-### Tech Stack Visualization
-<div align="center">
-  <img src="https://via.placeholder.com/800x450?text=Tech+Stack+Visualization" alt="Tech Stack Visualization" width="800">
-  <p><em>Visual representation of candidate's technical skills</em></p>
-</div>
-
-### Progress Tracking
-<div align="center">
-  <img src="https://via.placeholder.com/800x450?text=Progress+Tracking" alt="Progress Tracking" width="800">
-  <p><em>Real-time progress tracking through the screening process</em></p>
-</div>
-
 ---
 
 ## 🛠️ Installation
@@ -102,7 +89,7 @@ To revolutionize the recruitment process by providing an efficient, unbiased, an
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/talentscout-hiring-assistant.git
+   git clone https://github.com/FaheemKhan0817/TalentScout-Hiring-Assistant.git
    cd talentscout-hiring-assistant
    ```
 
@@ -316,9 +303,9 @@ We welcome contributions to improve TalentScout Hiring Assistant! Please follow 
 1. **Fork the Repository**
    ```bash
    # Fork on GitHub and clone locally
-   git clone https://github.com/yourusername/talentscout-hiring-assistant.git
+   git clone https://github.com/FaheemKhan0817/TalentScout-Hiring-Assistant.git
    cd talentscout-hiring-assistant
-   git remote add upstream https://github.com/originalusername/talentscout-hiring-assistant.git
+   git remote add upstream https://github.com/FaheemKhan0817/TalentScout-Hiring-Assistant.git
    ```
 
 2. **Create a Feature Branch**
@@ -405,9 +392,9 @@ We would like to express our gratitude to the following projects and communities
 
 For questions, suggestions, or collaboration opportunities:
 
-- **Email**: talentscout@example.com
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/talentscout-hiring-assistant/issues)
-- **Discussions**: [Join our discussions](https://github.com/yourusername/talentscout-hiring-assistant/discussions)
+- **Email**: faheemthakur23@gmail.com
+- **GitHub Issues**: [Create an issue](https://github.com/FaheemKhan0817/TalentScout-Hiring-Assistant.git/issues)
+- **Discussions**: [Join our discussions](https://github.com/FaheemKhan0817/TalentScout-Hiring-Assistant.git/discussions)
 
 ---
 
@@ -419,6 +406,6 @@ For questions, suggestions, or collaboration opportunities:
     Star this repository if you find it helpful!
   </p>
   
-  [![Star History Chart](https://api.star-history.com/svg?repos=yourusername/talentscout-hiring-assistant&type=Date)](https://star-history.com/#yourusername/talentscout-hiring-assistant&Date)
+  [![Star History Chart](https://api.star-history.com/svg?repos=FaheemKhan0817/talentscout-hiring-assistant&type=Date)](https://star-history.com/#FaheemKhan0817/talentscout-hiring-assistant&Date)
 </div>
 ```
